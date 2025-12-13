@@ -9,14 +9,16 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ErrorIcon from '@mui/icons-material/Error';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+
 function SideNav() {
+    const value = 60;
   return (
     <div className='bg-[#F8FAFD] h-full w-60 position-relative p-10'>
         <div className='shadow-xl border-b h-full w-30 rounded-xl py-2 px-3 flex items-center justify-content-center'>
-            <AddIcon style={{fontSize:"30px"}}/>
+            <AddIcon style={{fontSize:"25px"}}/>
             <button className='font-semibold text-lg pl-2'>New</button>
         </div>
-        <div className='mt-10 py-10 space-y-2.5'>
+        <div className='mt-4 space-y-1.5'>
             <div>
                 <HomeIcon/>
                 <span>Home</span>
@@ -49,16 +51,16 @@ function SideNav() {
                 <DeleteOutlineIcon/>
                 <span>Trash</span>
             </div>
-            <div>
+            <div >
                 <CloudQueueIcon/>
-                <span> Storage (60% full)</span>
-                <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value='60'
-                    className="w-full accent-[#EF9800]"
-                />
+                <p> Storage (60% full)</p>
+                <div className="w-35 h-2 rounded-full bg-gray-200 overflow-hidden">
+                    <div
+                        className="h-full rounded-full bg-orange-500"
+                        style={{ width: `${value}%` }}
+                    >
+                    </div>
+                </div>
                 <span className='text-gray-800'>9 GB of 15 GB used</span>
             </div>
         </div>

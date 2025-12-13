@@ -8,13 +8,13 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import ErrorIcon from '@mui/icons-material/Error';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 function SideNav() {
   return (
     <div className='bg-[#F8FAFD] h-full w-60 position-relative p-10'>
-        <div className='shadow-lg h-full w-30 rounded-xl py-2 px-3 flex items-center justify-content-center'>
+        <div className='shadow-xl border-b h-full w-30 rounded-xl py-2 px-3 flex items-center justify-content-center'>
             <AddIcon style={{fontSize:"30px"}}/>
-            <button className='font-semibold text-xl'>New</button>
+            <button className='font-semibold text-lg pl-2'>New</button>
         </div>
         <div className='mt-10 py-10 space-y-2.5'>
             <div>
@@ -48,6 +48,18 @@ function SideNav() {
             <div>
                 <DeleteOutlineIcon/>
                 <span>Trash</span>
+            </div>
+            <div>
+                <CloudQueueIcon/>
+                <span> Storage (60% full)</span>
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value='60'
+                    className="w-full accent-[#EF9800]"
+                />
+                <span className='text-gray-800'>9 GB of 15 GB used</span>
             </div>
         </div>
     </div>
